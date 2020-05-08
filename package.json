@@ -1,0 +1,43 @@
+{
+  "name": "@tuckerconnelly/validate",
+  "version": "0.0.1",
+  "description": "Validate json schemas",
+  "repository": "https://github.com/tuckerconnelly/validate",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "DEBUG=validate* jest",
+    "prettier-all": "prettier --write index.js",
+    "eslint-all": "eslint index.js"
+  },
+  "dependencies": {
+    "ajv": "^6.12.2",
+    "debug": "^4.1.1",
+    "indefinite": "^2.3.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.0.0",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "eslint:recommended",
+    "env": {
+      "node": true,
+      "es6": true,
+      "jest": true
+    }
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "jest": {
+    "watchPathIgnorePatterns": [
+      "tmp",
+      "json"
+    ],
+    "forceExit": true
+  }
+}
