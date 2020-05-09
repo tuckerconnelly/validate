@@ -34,7 +34,7 @@ function validate(schema, data) {
   debug({ ajvErrors: ajv.errors });
 
   const errors = ajv.errors.map((error) => {
-    let title = error.message;
+    const title = error.message;
     const name = _.capitalize(_.startCase(error.dataPath.split('.').pop()));
     const source = error.dataPath.replace(/\./g, '/');
 
